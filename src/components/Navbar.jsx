@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HiMenuAlt1 } from 'react-icons/hi';
+import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Logo from '../assets/logo.png';
+import Logo1 from '../assets/logo.svg';
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
@@ -33,8 +35,10 @@ const Navbar = () => {
 						</div>
 
 						<div className='md:hidden'>
-							<div onClick={() => setNav(true)} className=' cursor-pointer'>
-								<HiMenuAlt1 />
+							<div
+								onClick={() => setNav(true)}
+								className=' hover:animate-pulse cursor-pointer'>
+								<HiMenuAlt3 size={30} />
 							</div>
 						</div>
 					</div>
@@ -44,34 +48,70 @@ const Navbar = () => {
 					<div
 						className={
 							nav
-								? 'fixed left-0 top-0 w-full h-screen z-[99999] text-lightGray bg-darkColor ease-in duration-500'
-								: 'fixed left-0 top-[-100%] w-full h-screen z-[99999] text-lightGray bg-darkColor ease-out duration-500'
+								? 'fixed left-0 top-0 w-full h-screen z-[99999] text-lightGray bg-darkColor p-4 ease-in duration-500'
+								: 'fixed left-0 top-[-100%] w-full h-screen z-[99999] text-lightGray bg-darkColor p-4 ease-out duration-500'
 						}>
 						{/* logo text */}
 						<div className='flex items-center justify-between'>
-							<Link to={'/'}>
-								<h1 className='text-2xl font-bold'>
-									QI<span>~</span>BEEKAY
-								</h1>
+							<Link to={'/'} onClick={() => setNav(false)}>
+								<img className='w-[7rem]' src={Logo1} alt='' />
 							</Link>
 							<div className='cursor-pointer' onClick={() => setNav(false)}>
-								<HiMenuAlt1 />
+								<HiX size={30} />
 							</div>
 						</div>
 
 						{/* links */}
-						<div className=''>
-							<ul className='font-medium text-sm'>
+						<div className='mt-16'>
+							<ul className=' grid gap-10 font-raleway font-bold text-5xl text-center'>
 								<li className=''>
-									<Link to={'/about'}>ABOUT</Link>
+									<Link
+										className='hover:bg-lightGray hover:text-darkColor px-10 py-5 duration-300'
+										to={'/about'}
+										onClick={() => setNav(false)}>
+										ABOUT
+									</Link>
 								</li>
 								<li className=''>
-									<Link to={'/kitchen'}>KITCHEN</Link>
+									<Link
+										className='hover:bg-lightGray hover:text-darkColor px-10 py-5'
+										to={'/kitchen'}
+										onClick={() => setNav(false)}>
+										KITCHEN
+									</Link>
 								</li>
 								<li className=''>
-									<Link to={'mailto:mokwechibuike7@gmail.com'}>CONTACT</Link>
+									<Link
+										className='hover:bg-lightGray hover:text-darkColor px-10 py-5'
+										to={'mailto:mokwechibuike7@gmail.com'}
+										onClick={() => setNav(false)}>
+										CONTACT
+									</Link>
 								</li>
 							</ul>
+						</div>
+
+						{/* icons */}
+						<div className='flex items-center justify-center gap-4 mt-10'>
+							<div className='bg-lightGray text-darkColor w-fit p-2 rounded-full'>
+								<Link to={'https://twitter.com/qi_beekay'} target='_blank'>
+									<FaTwitter size={20} />
+								</Link>
+							</div>
+							<div className='bg-lightGray text-darkColor w-fit p-2 rounded-full'>
+								<Link
+									to={'https://www.linkedin.com/in/chibuike-mokwe-119a08248/'}
+									target='_blank'>
+									<FaLinkedinIn size={20} />
+								</Link>
+							</div>
+							<div
+								className='bg-lightGray text-darkColor w-fit p-2 rounded-full'
+								target='_blank'>
+								<Link to={'https://github.com/chi-beekay/chibuke-mokwe.git'}>
+									<FaGithub size={20} />
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>
