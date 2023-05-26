@@ -13,7 +13,6 @@ import {
 import { TbBrandFramerMotion } from 'react-icons/tb';
 import { motion as m } from 'framer-motion';
 import { container, item } from '../components/animate';
-import Text from './Text';
 
 const AboutUs = () => {
 	return (

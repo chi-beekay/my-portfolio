@@ -26,6 +26,8 @@ const Cursor = ({ scale }) => {
 		};
 	}, []);
 
+	const isMediumOrLargeScreen = window.innerWidth >= 768;
+
 	// framer motion variant
 	const variants = {
 		default: {
@@ -43,7 +45,7 @@ const Cursor = ({ scale }) => {
 			mixBlendMode: 'difference',
 		},
 	};
-	return (
+	return isMediumOrLargeScreen ? (
 		<div>
 			<motion.div
 				variants={variants}
@@ -51,7 +53,7 @@ const Cursor = ({ scale }) => {
 				className='w-10 h-10 rounded-full bg-darkerColor fixed top-0 left-0 z-[200] pointer-events-none'
 			/>
 		</div>
-	);
+	) : null;
 };
 
 export default Cursor;

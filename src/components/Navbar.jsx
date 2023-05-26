@@ -49,7 +49,7 @@ const Navbar = () => {
 						className={
 							nav
 								? 'fixed left-0 top-0 w-full h-screen z-[99999] text-lightGray bg-darkColor p-4 ease-in duration-500'
-								: 'fixed left-0 top-[-100%] w-full h-screen z-[99999] text-lightGray bg-darkColor p-4 ease-out duration-500'
+								: 'fixed left-0 top-[-120vh] w-full h-screen z-[99999] text-lightGray bg-darkColor p-4 ease-out duration-500'
 						}>
 						{/* logo text */}
 						<div className='flex items-center justify-between'>
@@ -63,10 +63,10 @@ const Navbar = () => {
 
 						{/* links */}
 						<div className='mt-16'>
-							<ul className=' grid gap-10 font-raleway font-bold text-5xl text-center'>
+							<ul className=' grid gap-10 font-raleway font-bold text-2xl xs:text-5xl text-center'>
 								<li className=''>
 									<Link
-										className='hover:bg-lightGray hover:text-darkColor px-10 py-5 duration-300'
+										className='hover:bg-lightGray hover:text-darkColor px-10 py-5 duration-300 ease-in'
 										to={'/about'}
 										onClick={() => setNav(false)}>
 										ABOUT
@@ -74,7 +74,7 @@ const Navbar = () => {
 								</li>
 								<li className=''>
 									<Link
-										className='hover:bg-lightGray hover:text-darkColor px-10 py-5'
+										className='hover:bg-lightGray hover:text-darkColor px-10 py-5 duration-300 ease-in'
 										to={'/kitchen'}
 										onClick={() => setNav(false)}>
 										KITCHEN
@@ -82,7 +82,7 @@ const Navbar = () => {
 								</li>
 								<li className=''>
 									<Link
-										className='hover:bg-lightGray hover:text-darkColor px-10 py-5'
+										className='hover:bg-lightGray hover:text-darkColor px-10 py-5 duration-300 ease-in'
 										to={'mailto:mokwechibuike7@gmail.com'}
 										onClick={() => setNav(false)}>
 										CONTACT
