@@ -112,36 +112,29 @@ const AboutUs = () => {
 						</div>
 					</div>
 					<div className='mt-14'>
-						<m.p className='flex flex-col gap-10 font-raleway leading-10  sm:leading-[3rem] tracking-wide text-xl sm:text-3xl'>
-							<Text
-								speed='0.01'
-								delay='2'
-								text='My name is Mokwe Chibuike (qi-beekay). I am currently located in
-							West Africa and hold a B.Sc in Computer Sciences from the
-							University of Benin City. I have one year of experience as a
-							Frontend Engineer and am proficient in various front-end
-							technologies. My focus is on developing user-friendly web
-							applications with a strong emphasis on responsiveness. Currently,
-							I am working towards becoming a Fullstack Software Engineer.'
-							/>
-							<Text
-								speed='0.01'
-								delay='5'
-								text='I am a passionate and self-motivated developer who is open to
-								work and gigs. I am also always eager to learn and develop
+						<p className='flex flex-col gap-10 font-raleway leading-10  sm:leading-[3rem] tracking-wide text-xl sm:text-3xl'>
+							<span>
+								My name is Mokwe Chibuike (qi-beekay). I am currently located in
+								West Africa and hold a B.Sc in Computer Sciences from the
+								University of Benin City. I have one year of experience as a
+								Frontend Engineer and am proficient in various front-end
+								technologies. My focus is on developing user-friendly web
+								applications with a strong emphasis on responsiveness.
+								Currently, I am working towards becoming a Fullstack Software
+								Engineer.
+							</span>
+							<span>
+								text='I am a passionate and self-motivated developer who is open
+								to work and gigs. I am also always eager to learn and develop
 								myself further.'
-							/>
-							<Text
-								speed='0.01'
-								delay='7'
-								text="When I'm not coding, I enjoy playing basketball, which is my
+							</span>
+							<span>
+								When I'm not coding, I enjoy playing basketball, which is my
 								passion. Standing at 6ft5, I am drawn to this career.
 								Additionally, I am a lover of food and music, which I find
-								therapeutic."
-							/>
-							<span></span>
-							<span></span>
-						</m.p>
+								therapeutic.
+							</span>
+						</p>
 					</div>
 
 					{/* tools */}
